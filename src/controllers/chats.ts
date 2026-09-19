@@ -41,7 +41,7 @@ export const deleteChat = (req: Request, res: Response): void => {
 
   res.status(204).json({
     success: true,
-    data: {},
+    data: {id:chatId},
     error: null
   });
 };
