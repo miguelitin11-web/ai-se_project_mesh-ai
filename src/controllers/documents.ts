@@ -41,7 +41,7 @@ export const deleteDocument = (req: Request, res: Response): void => {
 
   res.status(204).json({
     success: true,
-    data: {},
+    data: {id: documentId},
     error: null
   });
 };
