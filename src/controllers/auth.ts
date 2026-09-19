@@ -12,3 +12,19 @@ export const getCurrentUser = (req: Request, res: Response): void => {
     error: null
   });
 };
+
+export const register = (req: Request, res: Response): void => {
+  res.status(201).json({
+    success: true,
+    data: { userId: "user_001", email: "user@example.com" },
+    error: null
+  });
+};
+
+export const login = (req: Request, res: Response): void => {
+  res.status(200).json({
+    success: true,
+    data: { userId: "user_001", token: "fake_token" },
+    error: null
+  });
+};
