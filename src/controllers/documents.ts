@@ -1,13 +1,11 @@
 import type { Request, Response } from 'express';
 import { readFileSync } from 'fs';
-import { createRequire } from 'module';
 import Document from '../models/document.js';
 import Chunk from '../models/chunk.js';
 import { chunkText } from '../utils/chunk.js';
 import { createEmbedding } from '../utils/embeddings.js';
+import { PDFParse } from 'pdf-parse';
 
-const require = createRequire(import.meta.url);
-const pdfParse = require('pdf-parse');
 
 export const getDocuments = async (req: Request, res: Response): Promise<void> => {
   const documents = await Document.find({ userId: req.user!.userId });
@@ -33,7 +31,8 @@ export const uploadDocument = async (req: Request, res: Response) => {
  const title = req.body.title || req.file.originalname;
 
  const dataBuffer = readFileSync(req.file.path);
- const pdfData = await pdfParse(dataBuffer);
+ const parser = new PDFParse({ data: dataBuffer });
+const pdfData = await parser.getText();
  const text = pdfData.text;
  const chunks = chunkText(text);
 

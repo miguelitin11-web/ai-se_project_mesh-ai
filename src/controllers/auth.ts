@@ -39,7 +39,7 @@ export const register = async (req: Request, res: Response): Promise<void> => {
     res.status(409).json({
       success: false,
       data: null,
-      error: { message: "User already exists" }
+      error: { message: "Email already exists" }
     });
     return;
   }
@@ -53,7 +53,11 @@ export const register = async (req: Request, res: Response): Promise<void> => {
    const { password: _pw, ...userData } = newUser.toObject();
   res.status(201).json({
     success: true,
-    data: userData,
+    data: {
+      userId: newUser._id,
+      email: newUser.email,
+      name: newUser.name,
+    },
     error: null
   });
 };
@@ -99,7 +103,11 @@ const { password: _pw, ...userData } = user.toObject();
 
 res.status(200).json({
   success: true,
-  data: { token, user: userData },
+  data: { 
+      userId: user._id,
+      email: user.email,
+      name: user.name,
+    },
   error: null
 });
 };

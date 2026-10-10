@@ -16,7 +16,7 @@ export const createChat = async (req: Request, res: Response): Promise<void> => 
   const { title } = req.body;
 
   if (!title) {
-    res.status(400).json({ success: false, data: null, error: "Must have a title" });
+    res.status(400).json({ success: false, data: null, error: {message: "Must have a title" }});
     return;
   }
 
@@ -37,7 +37,7 @@ const userId = req.user!.userId;
 
 const chat = await Chat.findOne({ _id: chatId, userId });
 if (!chat) {
-  res.status(404).json({ success: false, data: null, error: "Chat not found" });
+  res.status(404).json({ success: false, data: null, error: {message:"Chat not found" }});
   return;
 }
 const messages = await Message.find({ chatId: chat._id }).sort({ createdAt: 1 });
