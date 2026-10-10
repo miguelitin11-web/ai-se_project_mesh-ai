@@ -23,7 +23,7 @@ export const createMessage = async (req: Request, res: Response): Promise<void> 
 
   const chat = await Chat.findOne({ _id: chatId, userId });
   if (!chat) {
-    res.status(404).json({ success: false, data: null, error: 'Chat not found' });
+    res.status(404).json({ success: false, data: null, error: {message: 'Chat not found' }});
     return;
   }
 

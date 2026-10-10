@@ -104,9 +104,12 @@ const { password: _pw, ...userData } = user.toObject();
 res.status(200).json({
   success: true,
   data: { 
+    token,
+    user:{
       userId: user._id,
       email: user.email,
       name: user.name,
+    },
     },
   error: null
 });
