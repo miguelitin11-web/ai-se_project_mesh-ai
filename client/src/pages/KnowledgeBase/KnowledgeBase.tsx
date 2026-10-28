@@ -4,6 +4,7 @@ import type { KnowledgeDoc } from "../../utils/api";
 import UploadArea from "../../components/UploadArea/UploadArea";
 import { getDocuments } from "../../utils/api";
 import xIcon from '../../assets/icons/Vector.svg';
+import ChatInput from "../../components/ChatInput/ChatInput";
 
 export default function KnowledgeBase() {
   const [documents, setDocuments] = useState<KnowledgeDoc[]> ([]);
@@ -33,9 +34,9 @@ const handleFileSelect = (file: File) => {
  setDocuments([newDoc, ...documents]);
 };
   return <div className="knowledge-base">
-  <h1>Manage Your Knowledge Base</h1>
+  <h1 className="knowledge-base__title">Manage Your Knowledge Base</h1>
   <section className="knowledge-base__content">
-  
+  <h2 className="knowledge-base__uploadareatitle">Upload documents (PDF)</h2>
      <UploadArea onFileSelect={handleFileSelect} />
       {isLoading && (
   <p>Loading...</p>
@@ -59,6 +60,7 @@ const handleFileSelect = (file: File) => {
     ))}
   </div>)}
      <button type="button" className="knowledge-base__save">Save</button>
+     <ChatInput onSubmit={(question) => console.log(question)} />
   </section>
   
   </div>;

@@ -4,7 +4,8 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  height: 145px;
+  height: 178px;
+  width: 670px;
   background: #f6f3ff;
   border-radius: 16px;
   font-family: "Work Sans", Arial, Helvetica, sans-serif;
@@ -12,6 +13,9 @@
   font-size: 14px;
   line-height: 120%;
   color: rgba(28, 28, 28, 0.5);
+
+  opacity: 1;
+  gap: 12px;
 }
 
 .upload-area__label {

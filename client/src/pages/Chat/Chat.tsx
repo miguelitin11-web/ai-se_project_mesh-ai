@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import {useOutletContext} from "react-router-dom";
 
+
 type MobileContext = {
  isMobileMenuOpen: boolean;
  setIsMobileMenuOpen: (open: boolean) => void;
@@ -183,7 +184,7 @@ const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
   )}
 
   {activeChatId && !isLoadingMessages && !messagesError && (
-   <> <ul className="chat__messages">
+    <ul className="chat__messages">
       {messages.map((msg) => (
   <li key={msg._id} className={
     msg.role === 'user'
@@ -193,23 +194,24 @@ const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     {msg.role === 'user' ? <span>{msg.content}</span> : <span><ReactMarkdown>{msg.content}</ReactMarkdown></span>}
   </li>
 ))}
-      {/* See styling hints below. */}
-    </ul>
-    <div className="chat__input-bar">
-  <textarea
-    className="chat__input"
-    placeholder="Ask any question"
-    rows={1}
-    value={input}
- onChange={(e) => setInput(e.target.value)}
- onKeyDown={handleKeyDown}
-  />
-  <button
-    className="chat__send"
-    aria-label="Send message" type="button" disabled={!input.trim() || isSending} onClick={() => handleSend()}
-  ></button>
-</div></>
-  )}
-</div>
+    </ul> )}
+    {activeChatId && (
+  <div className="chat__input-bar">
+    <textarea
+      className="chat__input"
+      placeholder="Ask any question"
+      rows={1}
+      value={input}
+      onChange={(e) => setInput(e.target.value)}
+      onKeyDown={handleKeyDown}
+    />
+    <button
+      className="chat__send"
+      aria-label="Send message" type="button" disabled={!input.trim() || isSending} onClick={() => handleSend()}
+    ></button>
   </div>
-);}
+)}
+</div>
+</div>
+);
+} 
