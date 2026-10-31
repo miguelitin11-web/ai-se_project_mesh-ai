@@ -9,18 +9,18 @@ function ChatInput({ onSubmit }: Props) {
   const [text, setText] = useState("");
 
   function handleSubmit() {
-  onSubmit(text);
-  setText("");
-}
+    onSubmit(text);
+    setText("");
+  }
 
   return (
     <div className="chat-input">
-     <textarea
-  value={text}
-  onChange={(e) => setText(e.target.value)}
-  placeholder="Ask any question"
-/>
-<button onClick={handleSubmit}>Send</button>
+      <textarea
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Ask any question"
+      />
+      <button onClick={handleSubmit}>Send</button>
     </div>
   );
 }

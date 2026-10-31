@@ -1,5 +1,8 @@
-.knowledge-base__title {
-  margin-left: 290px;
+.knowledge-base {
+  max-width: 670px;
+  width: 100%;
+  gap: 32px;
+  margin: 0 auto;
 }
 .knowledge-base__save {
   border: none;
@@ -10,8 +13,8 @@
   width: 74px;
   height: 44px;
   opacity: 1;
-  margin-left: 290px;
 }
+
 .knowledge-base__uploadareatitle {
   font-family: Work Sans;
   font-weight: 400;
@@ -20,8 +23,8 @@
   line-height: 100%;
   letter-spacing: 0%;
   align-self: flex-start;
-  margin-left: 290px;
 }
+
 .knowledge-base__list {
   display: flex;
   flex-wrap: wrap;

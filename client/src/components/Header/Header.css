@@ -1,8 +1,8 @@
-header__menu-btn {
+.header__menu-btn {
   display: none;
   width: 24px;
   height: 24px;
-  background-image: url("../../assets/icon.png");
+  background-image: url("../../assets/icons/menu.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -54,6 +54,16 @@ header__menu-btn {
     justify-content: flex-start;
     gap: 12px;
     border-bottom: 1px solid rgb(0 0 0 / 0.1);
+
+    width: 393.6470642089844;
+    height: 60.672611236572266;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-right: 15.99px;
+    padding-bottom: 12px;
+    padding-left: 15.99px;
+    opacity: 1;
+    border-bottom-width: 0.7px;
   }
 
   .header__menu-btn {
