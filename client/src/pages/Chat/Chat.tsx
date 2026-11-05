@@ -165,7 +165,9 @@ export default function Chat() {
       <div className="chat__main">
         {!messagesError && !isLoadingMessages && !activeChatId && (
           <div className="chat__no-messages">
-            <p className="chat__no-selected">No chat selected</p>
+            <p className="chat__no-selected">
+              Ask a question below to start the conversation
+            </p>
             <button
               className="chat__newchat-btn"
               onClick={() => {
@@ -215,31 +217,30 @@ export default function Chat() {
             ))}
           </ul>
         )}
+        {activeChatId && !isLoadingMessages && messages.length === 0 && (
+          <p className="chat__prompt">
+            Ask a question below to start the conversation
+          </p>
+        )}
+
         {activeChatId && !isLoadingMessages && (
-          <div className="chat__empty-state">
-            <p className="chat__prompt">
-              {" "}
-              Ask a question below to start the conversation
-            </p>
-            <div className="chat__input-bar">
-              {" "}
-              <textarea
-                className="chat__input"
-                placeholder="Ask any question"
-                rows={1}
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={handleKeyDown}
-                disabled={!input.trim() || isSending}
-              />
-              <button
-                className="chat__send"
-                aria-label="Send message"
-                type="button"
-                disabled={!input.trim() || isSending}
-                onClick={() => handleSend()}
-              ></button>
-            </div>
+          <div className="chat__input-bar">
+            <textarea
+              className="chat__input"
+              placeholder="Ask any question"
+              rows={1}
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKeyDown}
+              disabled={!input.trim() || isSending}
+            />
+            <button
+              className="chat__send"
+              aria-label="Send message"
+              type="button"
+              disabled={!input.trim() || isSending}
+              onClick={() => handleSend()}
+            ></button>
           </div>
         )}
       </div>

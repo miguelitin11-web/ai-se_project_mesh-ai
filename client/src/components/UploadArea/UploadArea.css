@@ -47,8 +47,23 @@
   display: none;
 }
 
-@media (max-width: 394px) {
-  .upload-area__label span {
-    display: none;
+@media (max-width: 600px) {
+  .upload-area {
+    max-width: 354;
+    height: 178;
+    gap: 12px;
+    opacity: 1;
+  }
+
+  .upload-area__input {
+    width: 354;
+    height: 145;
+    gap: 10px;
+    opacity: 1;
+    padding-top: 34px;
+    padding-right: 236px;
+    padding-bottom: 34px;
+    padding-left: 236px;
+    border-radius: 16px;
   }
 }

@@ -45,3 +45,67 @@
   gap: 20px;
   align-items: center;
 }
+
+@media (max-width: 600px) {
+  .header {
+    width: 393.6470642089844;
+    height: 60.672611236572266;
+    justify-content: space-between;
+    opacity: 1;
+    padding-top: 12px;
+    padding-right: 15.99px;
+    padding-bottom: 12px;
+    padding-left: 15.99px;
+    border-bottom-width: 0.7px;
+  }
+
+  .header__nav_mobile {
+    width: 220;
+    height: 156;
+    gap: 12px;
+    opacity: 1;
+  }
+
+  .upload-area {
+    max-width: 354;
+    height: 178;
+    gap: 12px;
+    opacity: 1;
+  }
+
+  .upload-area__input {
+    width: 354;
+    height: 145;
+    gap: 10px;
+    opacity: 1;
+    padding-top: 34px;
+    padding-right: 236px;
+    padding-bottom: 34px;
+    padding-left: 236px;
+    border-radius: 16px;
+  }
+  .knowledge-base__content {
+    width: 394;
+    height: 684;
+    gap: 32px;
+    opacity: 1;
+    padding-top: 32px;
+    padding-right: 20px;
+    padding-bottom: 32px;
+    padding-left: 20px;
+  }
+
+  .knowledge-base__save {
+    max-width: 354;
+    width: 100%;
+    height: 52;
+    gap: 10px;
+    opacity: 1;
+    padding-top: 10px;
+    padding-right: 16px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+}
