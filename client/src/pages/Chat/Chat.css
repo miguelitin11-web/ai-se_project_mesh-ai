@@ -336,7 +336,9 @@
     margin-left: 6px;
   }
   .chat__input-bar {
-    margin-bottom: 80px;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
   }
 }
 
