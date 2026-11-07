@@ -232,7 +232,7 @@ export default function Chat() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              disabled={!input.trim() || isSending}
+              disabled={isSending}
             />
             <button
               className="chat__send"
