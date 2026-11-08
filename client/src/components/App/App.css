@@ -16,3 +16,10 @@
   padding-left: 16px;
   border-radius: 8px;
 }
+
+@media (max-width: 600px) {
+  .app {
+    min-width: 393px;
+    max-height: 650px;
+  }
+}

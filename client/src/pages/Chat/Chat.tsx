@@ -4,6 +4,7 @@ import type { Chat as ChatType, Message } from "../../utils/api";
 import { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { useOutletContext } from "react-router-dom";
+import sendIcon from "../../assets/icons/vector.png";
 
 type MobileContext = {
   isMobileMenuOpen: boolean;
@@ -207,7 +208,7 @@ export default function Chat() {
                 }
               >
                 {msg.role === "user" ? (
-                  <span>{msg.content}</span>
+                  <span className=".chat__message-span">{msg.content}</span>
                 ) : (
                   <span>
                     <ReactMarkdown>{msg.content}</ReactMarkdown>
@@ -240,7 +241,9 @@ export default function Chat() {
               type="button"
               disabled={!input.trim() || isSending}
               onClick={() => handleSend()}
-            ></button>
+            >
+              <img src={sendIcon} alt="Send" />
+            </button>
           </div>
         )}
       </div>
