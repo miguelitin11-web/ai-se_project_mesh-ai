@@ -19,7 +19,8 @@
 
 @media (max-width: 600px) {
   .app {
-    min-width: 393px;
+    max-width: 100%;
+    overflow-x: hidden;
     max-height: 650px;
   }
 }

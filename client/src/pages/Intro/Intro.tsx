@@ -15,22 +15,36 @@ export default function Intro() {
 
       <section className="intro__features" aria-label="Mesh AI features">
         <article className="intro__feature">
-          <img className="intro__illustration" src={iconCollect} alt="" />
+          <img
+            className="intro__illustration"
+            src={iconCollect}
+            alt="Three white documents in fan disposition with purple background"
+          />
           <p>Bring all your documents into one secure AI workspace</p>
         </article>
 
         <article className="intro__feature">
-          <img className="intro__illustration" src={iconOrganize} alt="" />
+          <img
+            className="intro__illustration"
+            src={iconOrganize}
+            alt=" Documents inside a white folder with purple background"
+          />
           <p>Organize and manage the documents that power your AI</p>
         </article>
 
         <article className="intro__feature">
-          <img className="intro__illustration" src={iconDiscover} alt="" />
+          <img
+            className="intro__illustration"
+            src={iconDiscover}
+            alt="Three purple documents with three shining stars with purple background"
+          />
           <p>Your knowledge base, accessible through a simple chat interface</p>
         </article>
       </section>
 
-      <p className="intro__prompt">Start by creating your Organization’s Knowledge Base</p>
+      <p className="intro__prompt">
+        Start by creating your Organization’s Knowledge Base
+      </p>
       <button className="intro__start" onClick={() => navigate("/knowledge")}>
         Start
       </button>

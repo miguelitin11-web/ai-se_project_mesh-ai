@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 12px;
   list-style: none;
-  max-width: min(80%, 720px);
+  max-width: 80%;
   word-break: break-word;
   line-height: 1.5;
 
@@ -125,7 +125,7 @@
 
 .chat__new-btn {
   align-self: self-start;
-  width: 220px;
+  width: 75%;
   height: 36px;
   gap: 10px;
   opacity: 1;
@@ -140,7 +140,7 @@
 }
 
 .chat__title-input {
-  width: 220px;
+  width: 75%;
   height: 36px;
   opacity: 1;
   padding-top: 8px;
@@ -214,7 +214,6 @@
   margin: 0 auto;
   margin-top: 47px;
   margin-bottom: 107px;
-
   opacity: 1;
   justify-content: center;
 }
@@ -271,8 +270,7 @@
 .chat__list {
   list-style: none;
   list-style-type: none;
-  width: 220px;
-
+  width: 100%;
   height: 156px;
   gap: 12px;
   opacity: 1;
@@ -284,8 +282,7 @@
     top: 47px; /* match header height */
     left: 0;
     bottom: 0;
-    height: 164px;
-
+    width: 75%;
     z-index: 102;
     background: #fff;
     transform: translateX(-100%);
@@ -300,7 +297,7 @@
     font-weight: 600;
     font-style: SemiBold;
     font-size: 32px;
-    width: 362px;
+    width: 100%;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
@@ -317,12 +314,11 @@
   /* Remove desktop margin-left offsets */
   .chat__messages {
     margin-left: 0;
-    min-width: 393.6470642089844;
-    max-height: 650.1217651367188;
+    height: 70%;
     padding-top: 24px;
     padding-right: 15.99px;
     padding-left: 15.99px;
-
+    padding-bottom: 150px;
     opacity: 1;
   }
 
@@ -330,7 +326,7 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    max-height: 791px;
+
     align-items: center;
     position: relative;
   }
@@ -357,7 +353,6 @@
   .chat__main {
     flex: 1;
     justify-content: center;
-    max-height: 791px;
   }
 
   .chat__empty-state {
@@ -378,13 +373,7 @@
 
   .nav__link {
     background-color: #fff;
-  }
-
-  .upload-area {
-    max-width: 354px;
-    height: 178px;
-    gap: 12px;
-    opacity: 1;
+    width: 75%;
   }
 
   .upload-area__input {
@@ -400,7 +389,7 @@
   }
 
   .chat__input {
-    min-width: 393px;
+    width: 100%;
     height: 141px;
     justify-content: space-between;
     padding-top: 10px;
@@ -414,11 +403,11 @@
 
   .chat__input-bar {
     position: absolute;
-    bottom: 40px;
+    bottom: 9px;
     margin-bottom: auto;
     left: 1px;
     background: white;
-    min-width: 393px;
+    width: 100%;
     justify-content: space-between;
     padding-top: 10px;
     padding-right: 16px;
